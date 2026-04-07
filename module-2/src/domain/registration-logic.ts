@@ -9,6 +9,7 @@ export const generateReport = (status: RegistrationStatus): string => {
     case "FINISHED":
       return `Finished: Final average grade of ${status.averageGrade}.`;
     default:
-      return "Unknown status.";
+      const _exhaustiveCheck: never = status;
+      return _exhaustiveCheck;
   }
 };
